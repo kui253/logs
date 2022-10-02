@@ -13,25 +13,23 @@ k近邻（kNN）算法的工作机制比较简单，
 
 在lab0中使用的是k = 1 的情况，预测的结果有0.9631,knn类如下所示
 
-[通过马氏距离来分类MINST数据集](E:\pytest\lab0\lab0\myknn.py)
+[KNN算法](https://github.com/kui253/logs/blob/master/lab0/myknn.py))
+
+[通过马氏距离来分类MINST数据集](https://github.com/kui253/logs/blob/master/lab0/myknn.py))
 
 #### MINST数据集的处理
 
 使用自带的open就可打开二进制的文件，然后最重要的就是设置偏移量了 ，这就需要看清楚idx1-ubyte的说明了，使用unpack_from可以截取二进制文件的文件的位置，具体的说明在代码中有详细的注释
 
-[使用struct库读取二进制文件和处理偏移量](E:\pytest\lab0\read.py)
+[使用struct库读取二进制文件和处理偏移量](https://github.com/kui253/logs/blob/master/lab0/myknn.py))
 
-#### 参考文件
 
-[可以输入k值的knn类](E:\pytest\lab0\KNNmy2.py)
-
-[读取二进制文件函数的参考和说明](E:\pytest\lab0\read.py)
 
 ### lab1（完成了helloworld）
 
 import .xxxx 这里的.是使用的是相对路径
 
-#### 根据logistic回归的讲解和求解过程
+#### 根据logistic回归的求解过程
 
 1. 逻辑回归的梯度下降问题，相当于就是一个反复链式求导问题，这里的命名规则就是，对某个元素var求偏导记成dvar，
 
@@ -48,6 +46,12 @@ import .xxxx 这里的.是使用的是相对路径
 3. 正向传播和反向传播
 
    反向就是一个链式求导的过程，正向就是推导的过程，直接计算
+   
+   线性分类器，使用了逻辑回归来将计算的结果转换成概率，用得到的概率和label值作差得到dy，利用dy将进行反向传播
+   
+   [helloworld中的部分](https://github.com/kui253/logs/blob/master/lab1/helloworld.py)
+   
+   [linear部分的代码](https://github.com/kui253/logs/blob/master/lab1/nn/modules.py)
 
 
 
